@@ -1,0 +1,99 @@
+/* Estilos do Gerais */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #5a4c6e;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1, h2 {
+    margin-top: 20px;
+}
+
+/* Formulário */
+
+form div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+form input, form button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+/* Tabela */
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #05a1ad;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #fff;
+    text-align: center;
+}
+
+table th {
+    background-color: #447390;
+}
+
+/* Alternar cor das linhas */
+
+table tbody tr:nth-child(even) {
+    background-color: #447390;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 10px;
+        background-color: #444;
+    }
+
+    tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #fff;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        flex-basis: 40%;
+        text-align: left;
+    }
+
+    form div {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    form input, form button {
+        width: 100%;
+        font-size: 14px;
+    }
+}
