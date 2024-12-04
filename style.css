@@ -1,5 +1,4 @@
 /* Estilos do Gerais */
-
 body {
     font-family: Arial, sans-serif;
     background-color: #5a4c6e;
@@ -30,8 +29,15 @@ form input, form button {
     border-radius: 5px;
 }
 
-/* Tabela */
+form button {
+    cursor: pointer;
+}
 
+form input {
+    cursor: auto;
+}
+
+/* Tabela */
 table {
     width: 90%;
     margin: 20px auto;
@@ -50,13 +56,11 @@ table th {
 }
 
 /* Alternar cor das linhas */
-
 table tbody tr:nth-child(even) {
     background-color: #447390;
 }
 
 /* Responsividade */
-
 @media (max-width: 768px) {
     table, thead, tbody, th, td, tr {
         display: block;
